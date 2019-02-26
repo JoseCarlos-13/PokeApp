@@ -20,24 +20,31 @@
       <el-menu-item index="2-4-3">item three</el-menu-item>
     </el-submenu>
   </el-submenu>
+  <iconsocial></iconsocial>
 </el-menu>
 </div>
 </template>
 
 <script>
+import iconsocial from './iconsocial'
+
 export default {
-  data() {
-      return {
-        activeIndex: '1',
-        activeIndex2: '1'
-      };
-    },
-    methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+  components: {
+    'iconsocial': iconsocial
+  },
+
+  data () {
+    return {
+      activeIndex: '1',
+      activeIndex2: '1'
+    }
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     }
   }
+}
 </script>
 
 <style>

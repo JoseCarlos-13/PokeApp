@@ -1,32 +1,34 @@
 <template>
-  <div class="pokeApi">
+  <div v-if="pokemon" class="pokemon">
     <h1>{{pokemon.data.name}}</h1>
     <img v-bind:src="pokemon.data.sprites.front_default" alt="" width="350" height="350">
-    <h3 style="font-family: 'Share Tech Mono', monospace;">abilities:</h3>
+    <h3 style="font-family: 'Press Start 2P', cursive;">abilities:</h3>
     <ul class="list-abilities">
-      <li v-for="item in pokemon.data.abilities">{{item.ability.name}}</li>
+      <li :key="item.index" v-for="item in pokemon.data.abilities">{{item.ability.name}}</li>
     </ul>
   </div>
 </template>
 
 <script>
-  import axios from 'axios'
 
 export default {
-  data(){
-    return{
-      pokemon: null
+  data () {
+    return {
+
     }
   },
 
-  mounted(){
-    axios.get('https://pokeapi.co/api/v2/pokemon/pikachu/').then(response => (this.pokemon = response))
-  }
+  updated () {
+    console.log(this.pokemon)
+  },
+
+  props: ['pokemon']
+
 }
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
   .pokeApi{
     color: white;
@@ -35,14 +37,14 @@ export default {
 
   h1{
     margin-top: 35px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Press Start 2P', cursive;
   }
 
   .list-abilities li{
     list-style: none;
     color: darkblue;
     width: 300px;
-    margin-left: 740px;
+    margin-left: 556px;
     background-color: yellow;
     border: solid 5px;
     border-color: darkblue;

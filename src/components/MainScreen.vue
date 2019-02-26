@@ -1,24 +1,18 @@
 <template>
   <div>
     <menubar></menubar>
-    <iconsocial></iconsocial>
-    <searchbar></searchbar>
-    <pokeApi></pokeApi>
+    <container></container>
   </div>
 </template>
 
 <script>
-import searchbar from './searchbar'
 import menubar from './menubar'
-import iconsocial from './iconsocial'
-import pokeApi from './pokeApi'
+import container from './Containerapi'
 
 export default {
   components: {
-    'searchbar': searchbar,
     'menubar': menubar,
-    'iconsocial': iconsocial,
-    'pokeApi': pokeApi
+    'container': container
   }
 }
 </script>
