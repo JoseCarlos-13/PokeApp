@@ -6,6 +6,7 @@
     <ul class="list-abilities">
       <li :key="item.index" v-for="item in pokemon.data.abilities">{{item.ability.name}}</li>
     </ul>
+    <a style="color: white;">click here for more informations about this pokemon</a>
   </div>
 </template>
 
@@ -44,12 +45,16 @@ export default {
     list-style: none;
     color: darkblue;
     width: 300px;
-    margin-left: 556px;
+    margin-left: 546px;
     background-color: yellow;
     border: solid 5px;
     border-color: darkblue;
     border-radius: 7px;
     padding: 15px;
+  }
+
+  .list-abilities{
+    margin-bottom: 26px;
   }
 
 </style>

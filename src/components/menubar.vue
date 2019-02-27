@@ -48,8 +48,4 @@ export default {
 </script>
 
 <style>
-  .el-menu{
-    width: 1550px;
-    margin-left: 165px;
-  }
 </style>
