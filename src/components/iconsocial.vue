@@ -20,7 +20,7 @@ export default {
 .icons-social{
   margin-left: 1350px;
   margin-top: 5px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 </style>

@@ -6,7 +6,7 @@
     <ul class="list-abilities">
       <li :key="item.index" v-for="item in pokemon.data.abilities">{{item.ability.name}}</li>
     </ul>
-    <a :href="pokelink" target="_blank">click here for more informations about this pokemon</a>
+    <a style="color: white;" :href="pokelink" target="_blank">click here for more informations about this pokemon</a>
   </div>
 </template>
 
@@ -21,7 +21,6 @@ export default {
 
   updated () {
     this.pokelink = 'https://www.google.com/search?q=' + this.pokemon.data.name
-    console.log(this.pokemon)
   },
 
   props: ['pokemon']

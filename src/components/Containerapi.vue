@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       pokemonReceived: null
-     }
+    }
   },
 
   methods: {
@@ -29,7 +29,7 @@ export default {
   },
 
   mounted () {
-    this.getPokemon("pikachu")
+    this.getPokemon('pikachu')
   }
 }
 </script>
