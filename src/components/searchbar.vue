@@ -1,7 +1,7 @@
 <template>
   <div>
   <el-input placeholder="Please input" v-model="search" class="inputbar">
-    <el-button slot="append" icon="el-icon-search" @click="getPokemon(search)"></el-button>
+    <el-button slot="append" icon="el-icon-search" @click="getPokemon(search) " ></el-button>
   </el-input>
 </div>
 </template>
